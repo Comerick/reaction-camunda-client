@@ -7,6 +7,10 @@ networks:
 
 services:
   camunda-client:
-    image: comerick/reaction-camunda-client:latest
+    # image: comerick/reaction-camunda-client:latest
+    build:
+      context: .
+    networks:
+      - reaction
     ports:
       - "8081:8081"
